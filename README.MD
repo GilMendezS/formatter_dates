@@ -3,6 +3,8 @@
 Example usging the class
 
 ```php
+    <?php
+    use ..\Helpers\CustomFormatDate;
     $date_to_change_format = "01-ago-2018"
     $formatter = new CustomFormatDate($date_to_change_format);
     echo $formatter->getDateWithYMDFormat();
@@ -11,9 +13,10 @@ Example usging the class
 Or you can use the factory class:
 
 ```php
+    use ..\Factories\DateFactory;
     $date_to_change_format = "01-ago-2018"
     echo DateFactory::createFormatYMDFrom($date_to_change_format);
     // output: 2018-08-01
 ```
 
-* Y-m-D will be the format returned
+* Y-m-d will be the format returned
